@@ -5,7 +5,8 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articleOne ={
+var articles={
+   articleOne:{
     title: "Article One | M Vishal",
     heading: "Article One",
     date: "Feb 21, 2018",
@@ -15,7 +16,22 @@ var articleOne ={
                <p>  This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.
             </p>
               <p>   This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.
-            </p>`
+            </p>`}
+,
+     articleTwo: {
+    title: "Article Two | M Vishal",
+    heading: "Article  Two",
+    date: "Feb 21, 2018",
+    content: `        <p>
+                This is the content for my first article.T
+            </p>`},
+         articleThree: {
+    title: "Article Three | M Vishal",
+    heading: "Article Three",
+    date: "Feb 21, 2018",
+    content: `        <p>
+                This is the content for my first article.
+            </p>`}
 };
 function createTemlate(data){
     var title=data.title;
@@ -50,9 +66,7 @@ var htmlTemplate =`
         </div>
         </div>
     </body>
-</html>
-
-`
+</html>`
 ;
 return htmlTemplate;
 }
