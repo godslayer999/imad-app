@@ -21,7 +21,7 @@ function createTemlate(data){
     var title=data.title;
     var date=data.date;
     var heading=data.heading;
-    vat content=data.content;
+    var content=data.content;
 
 var htmlTemplate =`
 
