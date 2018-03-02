@@ -22,14 +22,14 @@ var articles={
     heading: "Article  Two",
     date: "Feb 21, 2018",
     content: `        <p>
-                This is the content for my first article.T
+                This is the content for my second article.
             </p>`},
     "article-three": {
     title: "Article Three | M Vishal",
     heading: "Article Three",
     date: "Feb 21, 2018",
     content: `        <p>
-                This is the content for my first article.
+                This is the content for my third article.
             </p>`}
 };
 function createTemplate(data){
