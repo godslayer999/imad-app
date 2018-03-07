@@ -32,7 +32,7 @@ if(request.readyState===XMLHttpRequest.DONE){
   //Take some action
   if(request.status===200){
 
-var names={'name1','name2','name3','name4'};
+var names=['name1','name2','name3','name4'];
 var list='';
 for(var i=0;i<names[i].length;i++){
     list+='<li>'+name+'</li>';
@@ -44,6 +44,6 @@ ul.innerHTML=list;
 //Not done yet
 };
 //Make the request
-request.open('GET','http://vishalvishnu9061.imad.hasura-app.io/counter',true);
+request.open('GET','http://vishalvishnu9061.imad.hasura-app.io/submit-name/?name='+name,true);
 request.send(null);
 };
