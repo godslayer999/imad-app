@@ -15,6 +15,6 @@ if(request.readyState===XMLHttpRequest.DONE){
 //Not done yet
 };
 //Make the request
-request.open('GET','localhost:8080/counter',true);
+request.open('GET','http://vishalvishnu9061.imad.hasura-app.io/counter',true);
 request.send(null);
 };
