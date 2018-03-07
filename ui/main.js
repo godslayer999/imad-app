@@ -45,7 +45,7 @@ ul.innerHTML=list;
 //Not done yet
 };
 //Make the request
-var nameInput=document.getElementId('name');
+var nameInput=document.getElementById('name');
 name=nameInput.value();
 request.open('GET','http://vishalvishnu9061.imad.hasura-app.io/submit-name/?name='+name,true);
 request.send(null);
