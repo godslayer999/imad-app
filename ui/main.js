@@ -36,7 +36,7 @@ var names=request.responseText;
 names=JSON.parse(names);
 var list='';
 for(var i=0;i<names[i].length;i++){
-    list+='<li>'+name+'</li>';
+    list+='<li>'+names[i]+'</li>';
 }
 var ul=document.getElementId('namelist');
 ul.innerHTML=list;
@@ -45,6 +45,8 @@ ul.innerHTML=list;
 //Not done yet
 };
 //Make the request
+var nameInput=document.getElementId('name');
+name=nameInput.value();
 request.open('GET','http://vishalvishnu9061.imad.hasura-app.io/submit-name/?name='+name,true);
 request.send(null);
 };
