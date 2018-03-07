@@ -80,13 +80,6 @@ app.get('/counter',function(req,res){
     res.send(counter.toString());
 });
 
-app.get('/:articleName', function (req, res) {
-    //articleName= article-one
-    //articles[articleName] == {} content object for article one
-    var articleName = req.params.articleName;
-  res.send(createTemplate(articles[articleName]));
-});
-
 var names=[];
 app.get('/submit-name/:name',function(req,res){   //URL:/submit-name/?name=xxxx
     //Get the name from the request
@@ -95,6 +88,15 @@ app.get('/submit-name/:name',function(req,res){   //URL:/submit-name/?name=xxxx
     //JSON: Javascript Object Notation
     res.send(JSON.stringify(names));
 });
+
+app.get('/:articleName', function (req, res) {
+    //articleName= article-one
+    //articles[articleName] == {} content object for article one
+    var articleName = req.params.articleName;
+  res.send(createTemplate(articles[articleName]));
+});
+
+
 
 
 app.get('/ui/style.css', function (req, res) {
