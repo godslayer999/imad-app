@@ -1,28 +1,20 @@
-/*console.log('Loaded!');
-var element =document.getElementById("main-text");
-element.innerHTML="New Value";
-//Move the image
-
-var img= document.getElementById("madi");
-var marginRight=0;
-function moveLeft(){
-    marginRight=marginRight+1;
-    img.style.marginRight=marginRight + "px";
-}
-img.onclick=function(){
-    var interval =setInterval(moveLeft, 100);
-}*/
-var button=document.getElementById('counter');
-var counter=0;
+var button =document.getElementById('button');
 button.onclick=function(){
-    //Make a request to the counter endpoint
-    
-    //Capture the response and store it in a variable
-    
-    //Render the variable int ehe correct span
-counter=counter+1;
-var span=document.getElementById('count');
-    span.innerHTML=counter.toString();
+//create a request object 
+var request = new XMLHttpRequest();
 
-    
-}
+//Capture the request and store it in the variable
+request.onreadystatechange=function(){
+if(request.readyState===XMLHttpRequest.DONE){
+  //Take some action
+  if(request.status===200){
+   var counter = request.responseText;
+   var span = document.getElementById('count');
+   span.innerHTML=counter.toString();
+}}
+//Not done yet
+};
+//Make the request
+request.open('GET','localhost:8080/counter',true);
+request.send(null);
+};
