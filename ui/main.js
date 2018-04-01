@@ -54,7 +54,7 @@ request.send(null);
 
 
 var click2=getElementById('exp1');
-nameInput.onkeypress=function(){
+nameInput.onkeyup=function(){
     click2.innerHTML='I previously studied at Army Public School';
 }
 
