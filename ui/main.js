@@ -46,7 +46,17 @@ ul.innerHTML=list;
 };
 //Make the request
 var nameInput=document.getElementById('name');
-name=nameInput.value;
+var name=nameInput.value;
 request.open('GET','http://vishalvishnu9061.imad.hasura-app.io/submit-name/?name='+name,true);
 request.send(null);
 };
+
+
+
+var click2=getElementById('exp1');
+click2.onclick=function(){
+    click2.innerHTML='I previously studied at Army Public School';
+}
+
+
+
